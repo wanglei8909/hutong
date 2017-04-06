@@ -1,0 +1,30 @@
+//
+//  Hutong-Prefix.pch
+//  Hutong
+//
+//  Created by 王蕾 on 2017/3/13.
+//  Copyright © 2017年 王蕾. All rights reserved.
+//
+
+#ifndef Hutong_Prefix_pch
+#define Hutong_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "UIView+Frame.h"
+#import "DataManager.h"
+#import "AudioManager.h"
+#import "ListModel.h"
+#import "playGifView.h"
+#import "Commom.h"
+
+#define kSCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
+#define kSCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+
+#define kSetColor(rd,ge,be) ([UIColor colorWithRed:rd/255.0 green:ge/255.0 blue:be/255.0 alpha:1])
+#define kColorRed       ([UIColor colorWithRed:175/255.0 green:33/255.0 blue:60/255.0 alpha:1])
+#define DATAManager     [DataManager shareManager]
+#define AUDIOManager    [AudioManager shareManager]
+
+#endif /* Hutong_Prefix_pch */
