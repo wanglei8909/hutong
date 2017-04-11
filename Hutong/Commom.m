@@ -11,6 +11,14 @@
 @implementation Commom
 
 
++ (NSString *)transform:(NSString *)chinese
+{
+    NSMutableString *pinyin = [chinese mutableCopy];
+    CFStringTransform((__bridge CFMutableStringRef)pinyin, NULL, kCFStringTransformMandarinLatin, NO);
+    CFStringTransform((__bridge CFMutableStringRef)pinyin, NULL, kCFStringTransformStripCombiningMarks, NO);
+    pinyin = [[pinyin stringByReplacingOccurrencesOfString:@" " withString:@""] mutableCopy];
+    return [pinyin uppercaseString];
+}
 
 +(UIImage*) imageWithColor:(UIColor*)color
 {
@@ -56,7 +64,7 @@
     return sizeTemp;
 }
 
-- (UIViewController *)getCurrentViewController {
++ (UIViewController *)getCurrentViewController {
     
     UIViewController *result = nil;
     

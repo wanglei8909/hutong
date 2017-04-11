@@ -22,8 +22,7 @@
         effectView.frame = self.bounds;
         [self addSubview:effectView];
         
-        imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kSCREEN_WIDTH - 40, kSCREEN_HEIGHT * 0.3)];
-        imageView.center = CGPointMake(self.center.x, kSCREEN_HEIGHT * 0.25);
+        imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 64, kSCREEN_WIDTH, kSCREEN_HEIGHT * 0.5)];
         imageView.contentMode = UIViewContentModeScaleAspectFit;
         [self addSubview:imageView];
     }

@@ -73,7 +73,7 @@
 
 - (UILabel *)praiseLabel{
     if (!_praiseLabel) {
-        _praiseLabel = [[UILabel alloc] initWithFrame:CGRectMake(105, kSCREEN_HEIGHT - 46, 40, 20)];
+        _praiseLabel = [[UILabel alloc] initWithFrame:CGRectMake(kSCREEN_WIDTH - 50, kSCREEN_HEIGHT * 0.5 +60, 40, 20)];
         _praiseLabel.textColor = [UIColor whiteColor];
         _praiseLabel.backgroundColor = [UIColor clearColor];
         //_praiseLabel.textAlignment = NSTextAlignmentRight;
@@ -85,7 +85,7 @@
 
 - (UILabel *)lookLabel{
     if (!_lookLabel) {
-        _lookLabel= [[UILabel alloc] initWithFrame:CGRectMake(41, kSCREEN_HEIGHT - 46, 40, 20)];
+        _lookLabel= [[UILabel alloc] initWithFrame:CGRectMake(kSCREEN_WIDTH - 150, kSCREEN_HEIGHT * 0.5 +60, 40, 20)];
         _lookLabel.textColor = [UIColor whiteColor];
         _lookLabel.backgroundColor = [UIColor clearColor];
         //_lookLabel.textAlignment = NSTextAlignmentRight;
@@ -124,17 +124,17 @@
     [self.view addSubview:listBtn];
     
     self.progressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault];
-    self.progressView.frame = CGRectMake(0, kSCREEN_HEIGHT *0.5 - 2.5, kSCREEN_WIDTH, 2.5);
+    self.progressView.frame = CGRectMake(60, kSCREEN_HEIGHT  - 150, kSCREEN_WIDTH - 120, 3.5);
     self.progressView.progressTintColor = kColorRed;
     [self.displayView  addSubview:self.progressView];
     
-    self.timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(8, kSCREEN_HEIGHT * 0.5 +2, 60, 20)];
+    self.timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, self.progressView.top - 10, 60, 20)];
     self.timeLabel.textColor = [UIColor whiteColor];
     self.timeLabel.font = [UIFont systemFontOfSize:12];
     self.timeLabel.text = @"00:00";
     [self.displayView  addSubview:self.timeLabel];
     
-    self.durationLabel = [[UILabel alloc] initWithFrame:CGRectMake(kSCREEN_WIDTH - 68, kSCREEN_HEIGHT * 0.5 +2, 60, 20)];
+    self.durationLabel = [[UILabel alloc] initWithFrame:CGRectMake(kSCREEN_WIDTH - 70, self.timeLabel.top, 60, 20)];
     self.durationLabel.textColor = [UIColor whiteColor];
     self.durationLabel.font = [UIFont systemFontOfSize:12];
     self.durationLabel.textAlignment = NSTextAlignmentRight;
@@ -143,7 +143,7 @@
     
     self.playAndPause = [UIButton buttonWithType:UIButtonTypeCustom];
     self.playAndPause.frame = CGRectMake(0, 0, 40, 40);
-    self.playAndPause.center = CGPointMake(kSCREEN_WIDTH * 0.5, kSCREEN_HEIGHT *0.5 + 50);
+    self.playAndPause.center = CGPointMake(kSCREEN_WIDTH * 0.5, self.progressView.top + 60);
     [self.playAndPause setBackgroundImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
     [self.playAndPause setBackgroundImage:[UIImage imageNamed:@"pause"] forState:UIControlStateSelected];
     [self.playAndPause addTarget:self action:@selector(playAndPauseClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -164,43 +164,43 @@
     [self.displayView addSubview:previousBtn];
     
     UIButton *praiseBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    praiseBtn.frame = CGRectMake(80, self.praiseLabel.top  - 3, 20, 20);
+    praiseBtn.frame = CGRectMake(self.praiseLabel.left - 25, self.praiseLabel.top  - 3, 20, 20);
     [praiseBtn setBackgroundImage:[UIImage imageNamed:@"赞"] forState:UIControlStateNormal];
     [self.displayView addSubview:praiseBtn];
     
     UIButton *lookBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    lookBtn.frame = CGRectMake(16, self.lookLabel.top - 3, 20, 20);
+    lookBtn.frame = CGRectMake(self.lookLabel.left - 25, self.lookLabel.top - 3, 20, 20);
     [lookBtn setBackgroundImage:[UIImage imageNamed:@"脚印"] forState:UIControlStateNormal];
     [self.displayView addSubview:lookBtn];
     
     [self.displayView addSubview:self.nameLabel];
-    [self.displayView addSubview:self.subLabel];
+//    [self.displayView addSubview:self.subLabel];
     [self.displayView addSubview:self.praiseLabel];
     [self.displayView addSubview:self.lookLabel];
     
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(16, _playAndPause.bottom + 50, 40, 14)];
-    label.font = [UIFont systemFontOfSize:14];
-    label.textColor = [UIColor whiteColor];
-    label.text = @"作者:";
-    label.backgroundColor = [UIColor clearColor];
-    [self.displayView addSubview:label];
+//    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(16, _playAndPause.bottom + 50, 40, 14)];
+//    label.font = [UIFont systemFontOfSize:14];
+//    label.textColor = [UIColor whiteColor];
+//    label.text = @"作者:";
+//    label.backgroundColor = [UIColor clearColor];
+//    [self.displayView addSubview:label];
     
-    imageView = [[UIImageView alloc] initWithFrame:CGRectMake(50, label.bottom + 10, 50, 50)];
-    imageView.image = [UIImage imageNamed:@"anchor"];
-    imageView.layer.masksToBounds = YES;
-    imageView.layer.cornerRadius = 22.5;
-    [self.displayView addSubview:imageView];
-    
-    label = [[UILabel alloc] initWithFrame:CGRectMake(imageView.right + 8, _playAndPause.bottom + 10, 40, 14)];
-    label.bottom = imageView.bottom - 2;
-    label.font = [UIFont systemFontOfSize:14];
-    label.textColor = [UIColor whiteColor];
-    label.text = @"承东";
-    label.backgroundColor = [UIColor clearColor];
-    [self.displayView addSubview:label];
+//    imageView = [[UIImageView alloc] initWithFrame:CGRectMake(50, label.bottom + 10, 50, 50)];
+//    imageView.image = [UIImage imageNamed:@"anchor"];
+//    imageView.layer.masksToBounds = YES;
+//    imageView.layer.cornerRadius = 22.5;
+//    [self.displayView addSubview:imageView];
+//    
+//    label = [[UILabel alloc] initWithFrame:CGRectMake(imageView.right + 8, _playAndPause.bottom + 10, 40, 14)];
+//    label.bottom = imageView.bottom - 2;
+//    label.font = [UIFont systemFontOfSize:14];
+//    label.textColor = [UIColor whiteColor];
+//    label.text = @"承东";
+//    label.backgroundColor = [UIColor clearColor];
+//    [self.displayView addSubview:label];
     
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn.frame = CGRectMake(kSCREEN_WIDTH - 55, self.praiseLabel.top , 40, 22);
+    btn.frame = CGRectMake(kSCREEN_WIDTH - 55, kSCREEN_HEIGHT - 50 , 40, 22);
     btn.backgroundColor = [UIColor clearColor];
     [btn setTitle:@"反馈" forState:UIControlStateNormal];
     btn.titleLabel.font = [UIFont systemFontOfSize:12];

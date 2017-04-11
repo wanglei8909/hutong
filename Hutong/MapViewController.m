@@ -119,7 +119,7 @@
             aView.canShowCallout = NO;
             
         }
-        aView.titleLabel.text = myAnnotation.title;
+        [aView setContent:myAnnotation.title];
         aView.mid = myAnnotation.mid;
         aView.clickBlock = ^(NSInteger index){
             PlayerViewController *ctrl  = [PlayerViewController shareInstance];

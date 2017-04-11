@@ -14,11 +14,11 @@
 {
     self = [super init];
     if (self) {
-        self.mImageView = [[UIImageView alloc] initWithFrame:CGRectMake(16, 10, 60, 60)];
+        self.mImageView = [[UIImageView alloc] initWithFrame:CGRectMake(16, 10, 70, 70)];
         self.mImageView.backgroundColor = [UIColor lightGrayColor];
         [self.contentView addSubview:self.mImageView];
         
-        self.nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(96, 16, kSCREEN_WIDTH - 96 - 16, 16)];
+        self.nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(96, 10, kSCREEN_WIDTH - 96 - 16, 16)];
         self.nameLabel.font = [UIFont systemFontOfSize:16];
         self.nameLabel.textColor = kSetColor(51,51,51);
         [self.contentView addSubview:self.nameLabel];
@@ -35,6 +35,15 @@
 
 - (void)loadContent:(ListModel *)model{
     
+    @autoreleasepool {
+        for (UIView *view  in self.contentView.subviews) {
+            if (view == self.nameLabel || view == self.mImageView) {
+                continue;
+            }
+            [view removeFromSuperview];
+        }
+    }
+    
     if (model.playing && AUDIOManager.playing) {
         self.nameLabel.textColor = kColorRed;
     }else {
@@ -43,12 +52,32 @@
     self.mImageView.image = [UIImage imageNamed:model.images[0]];
     self.nameLabel.text = [NSString stringWithFormat:@"%@",model.name];
     
-    NSString *biaoqianStr = @"";
-    for (int i = 0; i<model.biaoqian.count; i++) {
-        NSString *biaoqian = [NSString stringWithFormat:@"#%@#  ",model.biaoqian[i]];
-        biaoqianStr = [biaoqianStr stringByAppendingString:biaoqian];
+    CGFloat iX = 96;
+    CGFloat iW = 75;
+    CGFloat iY = 50;
+    if (model.biaoqian.count > 3) {
+        iY = 35;
     }
-    self.desLabel.text = biaoqianStr;
+    for (int i = 0; i<model.biaoqian.count; i++) {
+        iX = 96 + i * (iW + 10);
+        if (iX > kSCREEN_WIDTH - 16 - iW) {
+            iX = 96;
+            iY += 25;
+        }
+        
+        UIImageView *image = [[UIImageView alloc] initWithFrame:CGRectMake(iX, iY, iW, 20)];
+        image.image = [UIImage imageNamed:@"icon-2"];
+        [self.contentView addSubview:image];
+        
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(5, 0, iW - 10, 20)];
+        label.textColor = [UIColor whiteColor];
+        label.textAlignment = NSTextAlignmentCenter;
+        label.backgroundColor = [UIColor clearColor];
+        label.font = [UIFont systemFontOfSize:13];
+        [image addSubview:label];
+        label.adjustsFontSizeToFitWidth = YES;
+        label.text = [model.biaoqian objectAtIndex:i];
+    }
 }
 
 

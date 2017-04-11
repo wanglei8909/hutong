@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B245B1E1E9B31DC001CE3DC /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B245B1D1E9B31DC001CE3DC /* DetailViewController.m */; };
+		9B245B241E9B6968001CE3DC /* DetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B245B231E9B6968001CE3DC /* DetailTableViewCell.m */; };
 		9B25726A1E7638380080A1B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B2572691E7638380080A1B9 /* main.m */; };
 		9B25726D1E7638380080A1B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B25726C1E7638380080A1B9 /* AppDelegate.m */; };
 		9B25726F1E7638380080A1B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B25726E1E7638380080A1B9 /* Assets.xcassets */; };
@@ -37,6 +39,10 @@
 		9B7B9C881E8E211E00CDC4E4 /* laba.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B7B9C871E8E211E00CDC4E4 /* laba.png */; };
 		9B7B9C8A1E8E2E6C00CDC4E4 /* anchor.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B7B9C891E8E2E6C00CDC4E4 /* anchor.png */; };
 		9B7B9C8C1E8E59EF00CDC4E4 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B7B9C8B1E8E59EF00CDC4E4 /* MessageUI.framework */; };
+		9B8CFFBF1E973948005E9306 /* icon-1-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B8CFFBB1E973948005E9306 /* icon-1-1.png */; };
+		9B8CFFC01E973948005E9306 /* icon-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B8CFFBC1E973948005E9306 /* icon-2.png */; };
+		9B8CFFC11E973948005E9306 /* icon-2-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B8CFFBD1E973948005E9306 /* icon-2-1.png */; };
+		9B8CFFC21E973948005E9306 /* icon-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B8CFFBE1E973948005E9306 /* icon-1.png */; };
 		9BA176281E77DE8F00E57B7F /* LXPagingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA176271E77DE8F00E57B7F /* LXPagingView.m */; };
 		9BBB545C1E8D043700728454 /* SublistView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB545B1E8D043700728454 /* SublistView.m */; };
 		9BBE97011E8914BA00BADB6A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BBE97001E8914BA00BADB6A /* MapKit.framework */; };
@@ -97,6 +103,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B245B1C1E9B31DC001CE3DC /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		9B245B1D1E9B31DC001CE3DC /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		9B245B221E9B6968001CE3DC /* DetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewCell.h; sourceTree = "<group>"; };
+		9B245B231E9B6968001CE3DC /* DetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewCell.m; sourceTree = "<group>"; };
 		9B2572651E7638380080A1B9 /* Hutong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hutong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B2572691E7638380080A1B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9B25726B1E7638380080A1B9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -148,6 +158,10 @@
 		9B7B9C871E8E211E00CDC4E4 /* laba.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laba.png; sourceTree = "<group>"; };
 		9B7B9C891E8E2E6C00CDC4E4 /* anchor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = anchor.png; sourceTree = "<group>"; };
 		9B7B9C8B1E8E59EF00CDC4E4 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		9B8CFFBB1E973948005E9306 /* icon-1-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-1-1.png"; sourceTree = "<group>"; };
+		9B8CFFBC1E973948005E9306 /* icon-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-2.png"; sourceTree = "<group>"; };
+		9B8CFFBD1E973948005E9306 /* icon-2-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-2-1.png"; sourceTree = "<group>"; };
+		9B8CFFBE1E973948005E9306 /* icon-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-1.png"; sourceTree = "<group>"; };
 		9BA176261E77DE8F00E57B7F /* LXPagingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXPagingView.h; sourceTree = "<group>"; };
 		9BA176271E77DE8F00E57B7F /* LXPagingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXPagingView.m; sourceTree = "<group>"; };
 		9BBB545A1E8D043700728454 /* SublistView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SublistView.h; sourceTree = "<group>"; };
@@ -253,8 +267,6 @@
 				9B27AD681E8BAEBE003E13D6 /* Data */,
 				9B25726B1E7638380080A1B9 /* AppDelegate.h */,
 				9B25726C1E7638380080A1B9 /* AppDelegate.m */,
-				9B5281F41E812C0800F714EF /* playGifView.h */,
-				9B5281F51E812C0800F714EF /* playGifView.m */,
 				9B64782F1E8284F20001B205 /* MapViewController.h */,
 				9B6478301E8284F20001B205 /* MapViewController.m */,
 				9BE3F2D61E8A67E8007D9C66 /* MyCustomAnnotationView.h */,
@@ -263,8 +275,10 @@
 				9BBE97051E8924CE00BADB6A /* MyAnnotation.m */,
 				9B2572951E7638E60080A1B9 /* MainViewController.h */,
 				9B2572961E7638E60080A1B9 /* MainViewController.m */,
-				9B28EA391E7A71B0007CD063 /* AudioToolView.h */,
-				9B28EA3A1E7A71B0007CD063 /* AudioToolView.m */,
+				9B245B1C1E9B31DC001CE3DC /* DetailViewController.h */,
+				9B245B1D1E9B31DC001CE3DC /* DetailViewController.m */,
+				9B245B221E9B6968001CE3DC /* DetailTableViewCell.h */,
+				9B245B231E9B6968001CE3DC /* DetailTableViewCell.m */,
 				9B2572AB1E766EC80080A1B9 /* PlayerViewController.h */,
 				9B2572AC1E766EC80080A1B9 /* PlayerViewController.m */,
 				9BBB545A1E8D043700728454 /* SublistView.h */,
@@ -279,6 +293,8 @@
 				9B27AD651E8BA59D003E13D6 /* PictureView.m */,
 				9B2572B51E7694CD0080A1B9 /* AudioManager.h */,
 				9B2572B61E7694CD0080A1B9 /* AudioManager.m */,
+				9B28EA391E7A71B0007CD063 /* AudioToolView.h */,
+				9B28EA3A1E7A71B0007CD063 /* AudioToolView.m */,
 				9B2572A91E766A750080A1B9 /* Rescource */,
 				9B2572981E763A8E0080A1B9 /* Data List.plist */,
 				9B25726E1E7638380080A1B9 /* Assets.xcassets */,
@@ -327,6 +343,10 @@
 		9B2572AA1E766A8B0080A1B9 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				9B8CFFBB1E973948005E9306 /* icon-1-1.png */,
+				9B8CFFBC1E973948005E9306 /* icon-2.png */,
+				9B8CFFBD1E973948005E9306 /* icon-2-1.png */,
+				9B8CFFBE1E973948005E9306 /* icon-1.png */,
 				9B7B9C891E8E2E6C00CDC4E4 /* anchor.png */,
 				9BC882F81E8CD47E0020B0FA /* play.png */,
 				9B7B9C871E8E211E00CDC4E4 /* laba.png */,
@@ -385,6 +405,8 @@
 				9B2572A51E7665EA0080A1B9 /* UIView+Frame.m */,
 				9BF8E8091E7E188800265829 /* Commom.h */,
 				9BF8E80A1E7E188800265829 /* Commom.m */,
+				9B5281F41E812C0800F714EF /* playGifView.h */,
+				9B5281F51E812C0800F714EF /* playGifView.m */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -537,6 +559,7 @@
 				9BC882FE1E8CD47E0020B0FA /* pause.png in Resources */,
 				9BC882D41E8CB3770020B0FA /* 西四北头条.m4a in Resources */,
 				9BC882E31E8CB39B0020B0FA /* 0_img3.JPG in Resources */,
+				9B8CFFC11E973948005E9306 /* icon-2-1.png in Resources */,
 				9BC882DD1E8CB38D0020B0FA /* 4_img3.jpg in Resources */,
 				9BC882E91E8CB3A30020B0FA /* 3_img3.jpg in Resources */,
 				9BC882ED1E8CB3AA0020B0FA /* 2_img1.jpg in Resources */,
@@ -549,6 +572,7 @@
 				9B7B9C8A1E8E2E6C00CDC4E4 /* anchor.png in Resources */,
 				9BC882EF1E8CB3AA0020B0FA /* 2_img3.jpg in Resources */,
 				9BC883071E8CE0780020B0FA /* 脚印.png in Resources */,
+				9B8CFFC01E973948005E9306 /* icon-2.png in Resources */,
 				9BC882E71E8CB3A30020B0FA /* 3_img1.jpg in Resources */,
 				9B2572A81E766A6C0080A1B9 /* 搜索icon.png in Resources */,
 				9BC882EE1E8CB3AA0020B0FA /* 2_img2.jpg in Resources */,
@@ -561,6 +585,7 @@
 				9BC882FC1E8CD47E0020B0FA /* play.png in Resources */,
 				9BC882D31E8CB3770020B0FA /* 暖男和珅.m4a in Resources */,
 				9B2572991E763A8E0080A1B9 /* Data List.plist in Resources */,
+				9B8CFFC21E973948005E9306 /* icon-1.png in Resources */,
 				9B2572B41E76857D0080A1B9 /* test.aac in Resources */,
 				9BC882E81E8CB3A30020B0FA /* 3_img2.jpg in Resources */,
 				9BC882F31E8CB3B10020B0FA /* 1_img1.JPG in Resources */,
@@ -570,6 +595,7 @@
 				9BC883091E8CE0870020B0FA /* sublist.png in Resources */,
 				9BF8E8081E7E177500265829 /* 拐棒胡同.m4a in Resources */,
 				9BC882CB1E8CB3650020B0FA /* 西四北四条.m4a in Resources */,
+				9B8CFFBF1E973948005E9306 /* icon-1-1.png in Resources */,
 				9BC882D11E8CB3770020B0FA /* 陈三立绝食而死.m4a in Resources */,
 				9BC882D21E8CB3770020B0FA /* 广济寺和帝王庙.m4a in Resources */,
 				9B6478291E8281880001B205 /* list.png in Resources */,
@@ -598,12 +624,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B2572B71E7694CD0080A1B9 /* AudioManager.m in Sources */,
+				9B245B241E9B6968001CE3DC /* DetailTableViewCell.m in Sources */,
 				9B7B9C861E8DFFE500CDC4E4 /* SubListCell.m in Sources */,
 				9B25726D1E7638380080A1B9 /* AppDelegate.m in Sources */,
 				9B27AD661E8BA59D003E13D6 /* PictureView.m in Sources */,
 				9B25729C1E763C590080A1B9 /* DataManager.m in Sources */,
 				9B2572971E7638E60080A1B9 /* MainViewController.m in Sources */,
 				9B2572A61E7665EA0080A1B9 /* UIView+Frame.m in Sources */,
+				9B245B1E1E9B31DC001CE3DC /* DetailViewController.m in Sources */,
 				9B2572A21E76466F0080A1B9 /* ListModel.m in Sources */,
 				9BA176281E77DE8F00E57B7F /* LXPagingView.m in Sources */,
 				9BF8E80B1E7E188800265829 /* Commom.m in Sources */,

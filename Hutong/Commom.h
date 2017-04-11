@@ -24,7 +24,7 @@
 + (UIViewController *)getCurrentViewController;
 
 //+ (UIView *)getLine:(CGRect)rect;
-
++ (NSString *)transform:(NSString *)chinese;
 
 @end
 

@@ -9,7 +9,7 @@
 #import "MainViewController.h"
 #import "MainListTableViewCell.h"
 #import "PlayerViewController.h"
-
+#import "DetailViewController.h"
 
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -54,7 +54,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 80;
+    return 90;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -73,14 +73,17 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    PlayerViewController *ctrl  = [PlayerViewController shareInstance];
     ListModel *model = DATAManager.dataArray[indexPath.row];
-    if (![model.id isEqualToString:DATAManager.playingModel.id] || !AUDIOManager.playing) {
-        DATAManager.playingModel = model;
-        [AUDIOManager newPlay];
-        [tableView reloadData];
-    }
-    [self.navigationController presentViewController:ctrl animated:YES completion:nil];    
+    DetailViewController *ctrl = [[DetailViewController alloc] init];
+    ctrl.mModel = model;
+    [self.navigationController pushViewController:ctrl animated:YES];
+//    PlayerViewController *ctrl  = [PlayerViewController shareInstance];
+//    if (![model.id isEqualToString:DATAManager.playingModel.id] || !AUDIOManager.playing) {
+//        DATAManager.playingModel = model;
+//        [AUDIOManager newPlay];
+//        [tableView reloadData];
+//    }
+//    [self.navigationController presentViewController:ctrl animated:YES completion:nil];    
 }
 
 - (void)searchClick{

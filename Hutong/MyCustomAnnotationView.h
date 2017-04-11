@@ -14,5 +14,9 @@ typedef void(^MyCustomAnnotationViewClickBlock)(NSInteger index);
 @property (nonatomic, copy)NSString *mid;
 @property (nonatomic, copy)MyCustomAnnotationViewClickBlock clickBlock;
 @property (nonatomic, strong)UILabel *titleLabel;
+@property (nonatomic, strong)UILabel *pinyinLabel;
+
+
+- (void)setContent:(NSString *)name;
 
 @end
